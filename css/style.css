@@ -8,7 +8,7 @@ header {
   display: flex;
   margin: auto;
   justify-content: space-evenly;
-  height: 4rem;
+  height: 5rem;
   background-color: azure;
 }
 
@@ -26,10 +26,20 @@ nav ul {
 }
 
 nav li {
-  padding: 10px;
+  padding: 5px;
   margin: auto;
 }
-
+nav li a {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 1rem;
+  transition: 1s;
+}
+nav li a:hover {
+  background-color:bisque;
+}
 h1 {
   padding: 10px;
   font-size: 3rem;
@@ -66,4 +76,8 @@ footer {
   height: 4rem;
   align-items: center;
   background-color: azure;
+}
+
+#chart-section {
+  margin-top: 1rem;
 }
