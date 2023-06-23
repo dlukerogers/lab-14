@@ -22,6 +22,7 @@ function renderChart() {
     numberVotes.push(dataObject[i].timesClicked);
     numberViews.push(dataObject[i].timesShown);
   }
+  Chart.defaults.color = "#000";
   new Chart(canvasElem, {
     type: 'bar',
     data: {
@@ -30,21 +31,32 @@ function renderChart() {
         label: '# of Votes',
         data: numberVotes,
         borderWidth: 2,
-        backgroundColor: '#0147AB',
-        borderColor: '#000080'
+        backgroundColor: '#FFC3BF',
+        borderColor: '#CC5279',
+        hoverBackgroundColor: '#CC5279'
       },
       {
         label: '# of Views',
         data: numberViews,
         borderWidth: 2,
-        backgroundColor: '#A45EE9',
-        borderColor: '#4B0076'
+        backgroundColor: '#52B2CC',
+        borderColor: '#0F7B99',
+        hoverBackgroundColor: '#0F7B99'
       }]
     },
     options: {
       scales: {
         y: {
-          beginAtZero: true
+          ticks: {
+            color: 'black',
+            beginAtZero: true
+          }
+        },
+        x: {
+          ticks: {
+            color: 'black',
+            beginAtZero: true
+          }
         }
       }
     }
